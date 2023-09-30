@@ -1,1 +1,7 @@
+# ignore the source of images
 *.7z
+
+# ignore the virtual environmental
+.venv/
+
+src/
