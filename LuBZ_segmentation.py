@@ -111,22 +111,18 @@ def LuBZ(file_path):
         c1 = np.sum(data[phi>0]*edge_constraint[phi>0])/(np.sum(edge_constraint[phi>0]))
         c2 = np.sum(data[phi<0]*edge_constraint[phi<0])/(np.sum(edge_constraint[phi<0]))
 
-        # if np.sqrt(((phi-prev_phi)**2).mean()) < tol:
-            # break
-        if t%10==0:
+        if t==0:
             plt.figure(f'{t} on image')
             plt.imshow(image, cmap = plt.cm.bone)
             plt.contour(phi, [0], colors='r', linewidths=0.5)
-            plt.title('t contour on image')
+            plt.title('Inital phi_0 and image')
             print(f'iter: {t}')
-            print(f'error: {np.sqrt(((phi-prev_phi)**2).mean())}')
 
         
     # plot the result
     fig, ax = plt.subplots(2,2)
-    ax[0,0].imshow(image)
-    ax[0,0].contour(init_curve, [0], colors='r', linewidths=0.5)
-    ax[0,0].set_title('Original image with initial curve')
+    ax[0,0].imshow(image, cmap=plt.cm.gray)
+    ax[0,0].set_title('Original image')
     ax[0,0].axis('off')
 
     ax[0,1].imshow(image, cmap = plt.cm.bone)
@@ -141,12 +137,6 @@ def LuBZ(file_path):
     ax[1,1].imshow((phi<0).astype(int)*1, cmap = plt.cm.bone)
     ax[1,1].set_title('region2')
     ax[1,1].axis('off')
-
-    # plt.figure('Energy')
-    # plt.plot( energy_storage, '*-')
-    # plt.ylabel('energy')
-    # plt.xlabel('time') 
-    # plt.title('Energy at each time')
 
 
     # Plot the surface.
