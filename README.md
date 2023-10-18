@@ -1,15 +1,13 @@
 # Lu, Bing-Ze's Segmentation
 
 ## Demo
-Here is the demo of single-level of Lu, Bing-Ze's segmentation method
+Here is the demo of Lu, Bing-Ze's segmentation method using single-level set.
 
 <img src="./figures/demo.png" alt="demo" width="500"/>
 
 This result is apply the initial called "Checkerboard"
 $$
-\begin{equation}
-    \phi_0(x,y) = \frac{\pi}{10} \left(\sin{x}+\cos{y} \right)
-\end{equation}
+\phi_0(x,y) = \frac{\pi}{10} \left(\sin{x}+\cos{y} \right)
 $$
 
 and the parameters relative to force terms are
