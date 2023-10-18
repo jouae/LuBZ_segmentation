@@ -11,7 +11,7 @@ This result is apply the initial called "Checkerboard"
 ```
 
 and the parameters relative to force terms are
-```nath
+```math
     \lambda_1 = 1, \\
     \lambda_2 = 1.
 ```
